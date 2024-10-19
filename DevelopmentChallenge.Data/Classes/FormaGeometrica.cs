@@ -13,6 +13,7 @@
 
 using DevelopmentChallenge.Data.Contracts;
 using DevelopmentChallenge.Data.Models;
+using DevelopmentChallenge.Data.Services;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -41,6 +42,8 @@ namespace DevelopmentChallenge.Data.Classes
     #endregion
 
     private readonly decimal _lado;
+
+    private static readonly IEnumerable<string> _validTypes = new List<string>() { nameof(SquareShape), nameof(CircleShape), nameof(EquilateralTriangleShape) };
 
     public IShape Shape { get; private set; }
 
@@ -73,6 +76,18 @@ namespace DevelopmentChallenge.Data.Classes
     }
 
     public static string Imprimir(List<FormaGeometrica> formas, int idioma)
+    {
+      string lang = idioma == Castellano ? "es" : "en";
+      List<IShape> shapes = new List<IShape>();
+      foreach (string shapeTypeName in _validTypes)
+      {
+        shapes.AddRange(formas.Where(r => r.Shape.GetType().Name == shapeTypeName).Select(r => r.Shape));
+      }
+
+      return ShapeReportService.HtmlReport(shapes, lang);
+    }
+
+    public static string _Imprimir(List<FormaGeometrica> formas, int idioma)
     {
       var sb = new StringBuilder();
 

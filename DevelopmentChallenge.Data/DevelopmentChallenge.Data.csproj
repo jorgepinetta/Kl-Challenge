@@ -52,6 +52,8 @@
     <Compile Include="Models\SquareShape.cs" />
     <Compile Include="Models\TrapezoidShape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\LanguageService.cs" />
+    <Compile Include="Services\ShapeReportService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
