@@ -25,11 +25,10 @@ x r0.1
 x Update nugets
 x Ejecucion de tests
 x r0.2
-- Revision OOP & SOLID
-- Core refactor
-- INCREMENTAR Tests refactorizados
-- Ejecucion de tests (ORIGINALES Y NUEVOS)
-- r0.3
+x Revision OOP & SOLID
+x Add +Models +Contracts
+x Ejecucion de tests
+x r0.3
 - Implementar la forma Trapecio/Rectangulo. 
 - Ejecucion de tests
 - r0.4
