@@ -14,10 +14,11 @@
 */
 
 # TASK:
-- Startup repo
-- Restore nugets
-- Ejecucion de tests
-- r0.1
+x Startup repo
+x Restore nugets
+x Ejecucion de tests
+x Corregir bugs (+NumberDecimalSeparator)
+x r0.1
 - Update nugets
 - Revision OOP & SOLID
 - Core refactor
