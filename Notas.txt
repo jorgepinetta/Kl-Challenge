@@ -13,22 +13,27 @@
  * Una vez finalizado, hay que subir el código a un repo GIT y ofrecernos la URL para que podamos utilizar la nueva versión :).
 */
 
+# ASSUMPTION
+Se deben mantener las firmas de la clase original porque se usa en otros desarrollos.
+
 # TASK:
 x Startup repo
 x Restore nugets
 x Ejecucion de tests
-x Corregir bugs (+NumberDecimalSeparator)
+x Corregir bugs (+NumberDecimalSeparator, +Typo)
 x r0.1
-- Update nugets
+x Update nugets
+x Ejecucion de tests
+x r0.2
 - Revision OOP & SOLID
 - Core refactor
 - INCREMENTAR Tests refactorizados
 - Ejecucion de tests (ORIGINALES Y NUEVOS)
-- r0.2
+- r0.3
 - Implementar la forma Trapecio/Rectangulo. 
 - Ejecucion de tests
-- r0.3
+- r0.4
 - Agregar el idioma Italiano (o el deseado) al reporte.
 - Ejecucion de tests (ORIGINALES Y NUEVOS)
-- r0.3
+- r0.5
 - Disponibilizar tag r1
