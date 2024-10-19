@@ -1,8 +1,8 @@
-﻿using System;
+﻿using DevelopmentChallenge.Data.Contracts;
 
 namespace DevelopmentChallenge.Data.Models
 {
-  public class SquareShape : Shape
+  public class SquareShape : IShape
   {
     private readonly decimal _side;
 
@@ -11,14 +11,8 @@ namespace DevelopmentChallenge.Data.Models
       _side = side;
     }
 
-    public override decimal GetArea()
-    {
-      return _side * _side;
-    }
+    public decimal Area => _side * _side;
 
-    public override decimal GetPerimeter()
-    {
-      return _side * 4;
-    }
+    public decimal Perimeter => _side * 4;
   }
 }

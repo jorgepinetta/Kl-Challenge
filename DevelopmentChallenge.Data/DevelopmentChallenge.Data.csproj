@@ -48,8 +48,9 @@
     <Compile Include="Contracts\IShape.cs" />
     <Compile Include="Models\CircleShape.cs" />
     <Compile Include="Models\EquilateralTriangleShape.cs" />
-    <Compile Include="Models\Shape.cs" />
+    <Compile Include="Models\RectangleShape.cs" />
     <Compile Include="Models\SquareShape.cs" />
+    <Compile Include="Models\TrapezoidShape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

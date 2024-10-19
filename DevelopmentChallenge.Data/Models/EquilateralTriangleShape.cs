@@ -1,8 +1,9 @@
-﻿using System;
+﻿using DevelopmentChallenge.Data.Contracts;
+using System;
 
 namespace DevelopmentChallenge.Data.Models
 {
-  public class EquilateralTriangleShape : Shape
+  public class EquilateralTriangleShape : IShape
   {
     private readonly decimal _side;
 
@@ -11,14 +12,8 @@ namespace DevelopmentChallenge.Data.Models
       _side = side;
     }
 
-    public override decimal GetArea()
-    {
-      return ((decimal)Math.Sqrt(3) / 4) * _side * _side;
-    }
+    public decimal Area => ((decimal)Math.Sqrt(3) / 4) * _side * _side;
 
-    public override decimal GetPerimeter()
-    {
-      return _side * 3;
-    }
+    public decimal Perimeter => _side * 3;
   }
 }

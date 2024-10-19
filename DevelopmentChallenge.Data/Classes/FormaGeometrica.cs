@@ -11,6 +11,8 @@
  * Una vez finalizado, hay que subir el código a un repo GIT y ofrecernos la URL para que podamos utilizar la nueva versión :).
  */
 
+using DevelopmentChallenge.Data.Contracts;
+using DevelopmentChallenge.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -19,6 +21,7 @@ using System.Text;
 
 namespace DevelopmentChallenge.Data.Classes
 {
+  [Obsolete("DEPRECATED: Use Shape service", false)]
   public class FormaGeometrica
   {
     #region Formas
@@ -39,6 +42,8 @@ namespace DevelopmentChallenge.Data.Classes
 
     private readonly decimal _lado;
 
+    public IShape Shape { get; private set; }
+
     private static readonly NumberFormatInfo _helpCulture = new NumberFormatInfo
     {
       NumberDecimalSeparator = ",",
@@ -51,6 +56,20 @@ namespace DevelopmentChallenge.Data.Classes
     {
       Tipo = tipo;
       _lado = ancho;
+      switch (Tipo)
+      {
+        case Cuadrado:
+          Shape = new SquareShape(ancho);
+          break;
+        case Circulo:
+          Shape = new CircleShape(ancho);
+          break;
+        case TrianguloEquilatero:
+          Shape = new EquilateralTriangleShape(ancho);
+          break;
+        default:
+          throw new ArgumentOutOfRangeException(@"Unknown form");
+      }
     }
 
     public static string Imprimir(List<FormaGeometrica> formas, int idioma)
@@ -157,26 +176,12 @@ namespace DevelopmentChallenge.Data.Classes
 
     public decimal CalcularArea()
     {
-      switch (Tipo)
-      {
-        case Cuadrado: return _lado * _lado;
-        case Circulo: return (decimal)Math.PI * (_lado / 2) * (_lado / 2);
-        case TrianguloEquilatero: return ((decimal)Math.Sqrt(3) / 4) * _lado * _lado;
-        default:
-          throw new ArgumentOutOfRangeException(@"Forma desconocida");
-      }
+      return Shape.Area;
     }
 
     public decimal CalcularPerimetro()
     {
-      switch (Tipo)
-      {
-        case Cuadrado: return _lado * 4;
-        case Circulo: return (decimal)Math.PI * _lado;
-        case TrianguloEquilatero: return _lado * 3;
-        default:
-          throw new ArgumentOutOfRangeException(@"Forma desconocida");
-      }
+      return Shape.Perimeter;
     }
   }
 }

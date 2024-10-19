@@ -2,8 +2,8 @@
 {
   public interface IShape
   {
-    decimal GetArea();
+    decimal Area { get; }
 
-    decimal GetPerimeter();
+    decimal Perimeter { get; }
   }
 }

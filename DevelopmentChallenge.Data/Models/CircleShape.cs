@@ -1,8 +1,9 @@
-﻿using System;
+﻿using DevelopmentChallenge.Data.Contracts;
+using System;
 
 namespace DevelopmentChallenge.Data.Models
 {
-  public class CircleShape : Shape
+  public class CircleShape : IShape
   {
     private readonly decimal _diameter;
 
@@ -11,14 +12,8 @@ namespace DevelopmentChallenge.Data.Models
       _diameter = diameter;
     }
 
-    public override decimal GetArea()
-    {
-      return (decimal)Math.PI * (_diameter * _diameter / 4);
-    }
+    public decimal Area => (decimal)Math.PI * (_diameter * _diameter / 4);
 
-    public override decimal GetPerimeter()
-    {
-      return (decimal)Math.PI * _diameter;
-    }
+    public decimal Perimeter => (decimal)Math.PI * _diameter;
   }
 }
