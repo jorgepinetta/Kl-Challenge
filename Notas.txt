@@ -40,8 +40,12 @@ x Agregar el idioma Italiano (o el deseado) al reporte.
 x Implementar en FormaGeometrica
 x Ejecucion de tests
 x r0.5
-- Crear Tests          
-- Ejecucion de tests (ORIGINALES Y NUEVOS)
-- r0.6
+x Crear Tests          
+x Ejecucion de tests (ORIGINALES Y NUEVOS)
+x r0.6
+- Incrementar Tests          
+- Revisar contraints de Trapezoid
+- Clean FromasGeometricas
+- r0.7
 - Add readme.md
 - Disponibilizar tag r1
