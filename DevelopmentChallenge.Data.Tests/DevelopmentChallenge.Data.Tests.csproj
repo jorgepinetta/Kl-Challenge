@@ -121,6 +121,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataEvoTestsTrapezoid.cs" />
+    <Compile Include="DataEvoTestsExceptions.cs" />
     <Compile Include="DataEvoTestsNew.cs" />
     <Compile Include="DataEvoTestsOriginals.cs" />
     <Compile Include="DataTests.cs" />

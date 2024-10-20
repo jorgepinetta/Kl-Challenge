@@ -9,7 +9,7 @@ namespace DevelopmentChallenge.Data.Models
 
     public CircleShape(decimal diameter)
     {
-      _diameter = diameter;
+      _diameter = diameter > 0 ? diameter : throw new ArgumentOutOfRangeException(nameof(diameter));
     }
 
     public decimal Area => (decimal)Math.PI * (_diameter * _diameter / 4);

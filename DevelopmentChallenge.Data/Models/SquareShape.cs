@@ -1,4 +1,5 @@
 ﻿using DevelopmentChallenge.Data.Contracts;
+using System;
 
 namespace DevelopmentChallenge.Data.Models
 {
@@ -8,7 +9,7 @@ namespace DevelopmentChallenge.Data.Models
 
     public SquareShape(decimal side)
     {
-      _side = side;
+      _side = side > 0  ? side : throw new ArgumentOutOfRangeException(nameof(side)) ;
     }
 
     public decimal Area => _side * _side;
