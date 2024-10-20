@@ -46,7 +46,7 @@ x r0.6
 x Incrementar Tests          
 x Revisar contraints de Trapezoid
 x Validar argumentos
-* Clean FromasGeometricas
-* r0.7
-- Add readme.md
-- Disponibilizar tag r1
+x Clean FromasGeometricas
+x r0.7
+x Add readme.md
+x Disponibilizar tag r1
