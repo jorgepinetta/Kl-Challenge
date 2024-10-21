@@ -50,3 +50,8 @@ x Clean FromasGeometricas
 x r0.7
 x Add readme.md
 x Disponibilizar tag r1
+x Hacer una implementacion correcta (Open/Closed) del servicio de Reporte
+x Restore Test Original.
+x Disponibilizar tag r2
+
+

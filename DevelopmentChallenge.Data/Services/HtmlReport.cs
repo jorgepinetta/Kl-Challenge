@@ -1,12 +1,11 @@
 ﻿using DevelopmentChallenge.Data.Contracts;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 
 namespace DevelopmentChallenge.Data.Services
 {
-  public static class ShapeReportService
+  public class HtmlReport : IReport<string>
   {
     private static readonly NumberFormatInfo _helpCulture = new NumberFormatInfo
     {
@@ -14,7 +13,7 @@ namespace DevelopmentChallenge.Data.Services
       NumberGroupSeparator = "."
     };
 
-    public static string HtmlReport(List<IShape> shapes, string language)
+    public string Generate(IShape[] shapes, string language)
     {
       var sb = new StringBuilder();
 

@@ -74,7 +74,8 @@ namespace DevelopmentChallenge.Data.Classes
         shapes.AddRange(formas.Where(r => r.Shape.GetType().Name == shapeTypeName).Select(r => r.Shape));
       }
 
-      return ShapeReportService.HtmlReport(shapes, lang);
+      HtmlReport report = new HtmlReport();
+      return report.Generate(shapes.ToArray(), lang);
     }
 
     public decimal CalcularArea()
